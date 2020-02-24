@@ -8,8 +8,8 @@ brew install go
 ```
 A working installation of [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
-Clone this repo into your $GO_PATH/src folder. 
-Use this command to check your current GO_PATH:
+Clone this repo into your $GOPATH/src folder. 
+Use this command to check your current GOPATH:
 ```bash
 go env
 ```
