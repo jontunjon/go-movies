@@ -1,0 +1,17 @@
+version: '3'
+services:
+  microservice:
+    build:
+      context: .
+      dockerfile: Dockerfile-minimal
+    image: cloud-native-go-movies:1.0.1
+    environment:
+      - MOVIE_PORT=9090
+    ports:
+      - "9090:9090"
+  nginx:
+    image: nginx:1.17.8
+    ports:
+      - "8080:80"
+    links:
+      - microservice

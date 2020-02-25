@@ -1,0 +1,7 @@
+FROM alpine:3.9.5
+MAINTAINER jontunjon
+COPY ./go-movies /app/go-movies
+RUN chmod +x /app/go-movies
+ENV MOVIE_PORT=8080
+EXPOSE 8080
+ENTRYPOINT /app/go-movies
