@@ -15,7 +15,7 @@ func main(){
 }
 
 func port() string {
-	port := os.Getenv("PORT")
+	port := os.Getenv("MOVIE_PORT")
 	if len(port) == 0 {
 		port = "8080"
 	}
