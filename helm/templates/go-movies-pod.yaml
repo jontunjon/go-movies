@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cloud-native-go-movies
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+    - name: cloud-native-go-movies
+      image: dtr.digitalroute.com/jonas.thungren/cloud-native-go-movies:1.0.1
+      env:
+        - name: MOVIE_PORT
+          value: {{ .Values.MoviePort | quote }}
+      ports:
+        - containerPort: {{ .Values.MoviePort }}
+          protocol: TCP
