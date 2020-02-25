@@ -124,4 +124,29 @@ docker tag cloud-native-go-movies:1.0.1 dtr.digitalroute.com/jonas.thungren/clou
 docker push dtr.digitalroute.com/jonas.thungren/cloud-native-go-movies:1.0.1
 ```
 
+## Installing in Kubernetes Using Helm
+A [helm configuration](./helm) for the docker image has been created to facilitate installation in kubernetes (in this case minikube).
+Installation based on this config is simply done using this command:
+```bash
+cd helm
+helm install movies .
+```
+Once the installation is done, check that the expected pod has been created and that it is running:
+```bash
+kubectl get pods
 
+NAME                     READY   STATUS    RESTARTS   AGE
+cloud-native-go-movies   1/1     Running   0          8s
+```
+Once again we can check that the app is serving requests using Postman. Just make sure to start port forwarding first in order to access the pod port from the local machine:
+```bash
+kubectl port-forward cloud-native-go-movies 8080:8080
+```
+To uninstall, simply use this command:
+```bash
+helm uninstall movies
+```
+This will stop and delete everything that was previously installed using the helm configuration.
+
+We can also verify that the port that the app is serving requests on is configurable by updating the **MoviePort** value in the [values.yaml](./helm/values.yaml) and then running the install command again.
+This time the portforwarding should be made against whatever the MoviePort value was set to.
