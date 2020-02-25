@@ -119,7 +119,7 @@ docker login dtr.digitalroute.com
 ```bash
 docker tag cloud-native-go-movies:1.0.1 dtr.digitalroute.com/jonas.thungren/cloud-native-go-movies:1.0.1
 ```
-4. Push the docker image to the remote repositor:
+4. Push the docker image to the remote repository:
 ```bash
 docker push dtr.digitalroute.com/jonas.thungren/cloud-native-go-movies:1.0.1
 ```
