@@ -12,6 +12,8 @@ On mac it can be installed like this:
 ```bash
 brew install go
 ```
+A go-capable IDE of your choice such as GoLand or Visual Studio Code.
+
 A working installation of [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 
 Clone this repo into your $GOPATH/src folder. 
