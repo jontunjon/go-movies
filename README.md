@@ -1,6 +1,11 @@
 # go-movies
 A simple go micro service exposing a movie REST API. 
 It is inspired from the online training course [Getting Started with Cloud Native Go](https://www.linkedin.com/learning/getting-started-with-cloud-native-go).
+
+It takes you through the steps of:
+- Implementing the micro service from scratch in go.
+- Creating a Dockerfile and building a docker image based on that.
+- Deploying and running the docker image in a kubernetes cluster.
 ## Prerequisites
 A working installation of go lang.
 On mac it can be installed like this:
