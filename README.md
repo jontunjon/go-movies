@@ -4,8 +4,8 @@ It is inspired from the online training course [Getting Started with Cloud Nativ
 
 It takes you through the steps of:
 - Implementing the micro service from scratch in go.
-- Creating a Dockerfile and building a docker image based on that.
-- Deploying and running the docker image in a kubernetes cluster.
+- Creating docker images in a number of different ways.
+- Installing the docker image in a kubernetes cluster.
 ## Prerequisites
 A working installation of go lang.
 On mac it can be installed like this:
