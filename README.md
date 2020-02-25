@@ -47,6 +47,13 @@ Build a docker image of the app like this:
 ```bash
 docker build -t cloud-native-go-movies:1.0.0 .
 ```
+To check the result:
+```bash
+docker images
+
+REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
+cloud-native-go-movies                    1.0.0               c1e044b38ae1        17 hours ago        827MB
+```
 ## Running Docker Image
 There are many ways to run the built image. 
 To run it as a daemon called "movies", use this command:
