@@ -1,13 +1,14 @@
 package api
 
 import (
+	"encoding/json"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestToJson(t *testing.T){
 	m := Movie{Id: "1234", Title: "Joker", Tagline: "Put on a happy face.", Director: "Todd Phillips"}
-	actual := m.ToJson()
+	actual, _ := json.Marshal(m)
 	assert.Equal(t,
 		`{"id":"1234","title":"Joker","tagline":"Put on a happy face.","director":"Todd Phillips"}`,
 		string(actual),

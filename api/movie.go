@@ -127,14 +127,6 @@ func deleteMovie(id string) bool {
 	}
 }
 
-func (m Movie) ToJson() []byte  {
-	result, err := json.Marshal(m)
-	if err != nil {
-		panic(err)
-	}
-	return result
-}
-
 func FromJson(data []byte) (Movie, error) {
 	movie := Movie{}
 	err := json.Unmarshal(data, &movie)
