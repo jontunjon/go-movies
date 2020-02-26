@@ -77,7 +77,7 @@ To test that the app is able to serve requests on a different port, you can add 
 docker run --name movies -d -e "MOVIE_PORT=9090" -p 9090:9090 cloud-native-go-movies:1.0.0
 ```
 ## Docker Compose
-Docker compose provides another way of buidling and running docker images.
+Docker compose provides another way of building and running docker images.
 In this example a more minimalistic docker image will be built and an nginx service will also be included in the image.
 Check out the [Dockerfile-minimal](./Dockerfile-minimal) and [docker-compose.yaml](./docker-compose.yaml) files for details.
 
