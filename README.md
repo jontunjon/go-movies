@@ -49,6 +49,8 @@ Build a docker image of the app like this:
 ```bash
 docker build -t cloud-native-go-movies:1.0.0 .
 ```
+This will build a docker image based on the details in [Dockerfile](./Dockerfile).
+
 To check the result:
 ```bash
 docker images
